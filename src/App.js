@@ -11,28 +11,28 @@ function App() {
   return (
     <div className="container">
       <div className="events">
-        <img src={events}/>
+        <img alt="astrix" src={events}/>
       </div>
       <div>
         <div className="header-logo">
           <div>
-            <img src={astrixLogo} />
+            <img alt="astrix" src={astrixLogo} />
           </div>
           <div>
-            <img src={headerLogo} />
+            <img alt="astrix" src={headerLogo} />
           </div>
         </div>
         <div className="box1">
           <h1 className="heading">ASTRIX COLLECTIBLE</h1>
         </div>
         <div className="toggle">
-          <img src={toggle} />
+          <img alt="astrix" src={toggle} />
         </div>
       </div>
       <div className="box2">
         <h1>
           Event : Oasis Bus tour , JLN Stadium , Delhi &nbsp;
-          <img src={astrickLogo} />
+          <img alt="astrix" src={astrickLogo} />
           &nbsp; Collection Live : Meta Lives , live on astrix
         </h1>
       </div>
@@ -47,15 +47,15 @@ function App() {
           </p>
         </div>
         <div className="content-2">
-          <img src={profiles} />
+          <img alt="astrix" src={profiles} />
           <div>22k people interested</div>
         </div>
         <div className="collectibles">
           <div>Collectibles</div>
           <div className="cards">
-            <img src={card} className="card" />
-            <img src={card} className="card" />
-            <img src={card} className="card" />
+            <img alt="astrix" src={card} className="card" />
+            <img alt="astrix" src={card} className="card" />
+            <img alt="astrix" src={card} className="card" />
           </div>
         </div>
       </div>
