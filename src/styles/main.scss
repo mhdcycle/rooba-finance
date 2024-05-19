@@ -1,0 +1,166 @@
+@import "variables";
+@import "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+
+body {
+  font-family: Arial, sans-serif, Roboto;
+  background-color: $primary-color;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 60% 10% 30%; // Default layout for large screens
+  z-index: 1;
+
+  // For medium screens
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr 1fr; // Adjust layout for medium screens
+    .box1 {
+      grid-column: span 2; // Span the first box across two columns
+    }
+  }
+
+  // For small screens
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr; // Stack them vertically on small screens
+  }
+
+  .header-logo {
+    display: flex;
+  }
+
+  .events {
+    position: absolute;
+    left: 420px;
+    top: 100px;
+
+    img {
+      width: 400px;
+      height: 100%;
+    }
+  }
+
+  .box1 {
+    display: flex;
+    align-items: center; // Vertically center content inside .box1
+    z-index: 2;
+
+    .heading {
+      font-family: "Lexend";
+      font-weight: 700;
+      font-size: 80px;
+      word-break: break-word; // Ensures long words break and wrap properly
+      word-wrap: normal;
+      white-space: normal;
+      line-height: 118px;
+      color: #ffffff33;
+      width: 400px;
+
+      @media (max-width: 1200px) {
+        font-size: 96px; // Adjust font size for smaller screens
+      }
+
+      @media (max-width: 900px) {
+        font-size: 64px; // Adjust font size for smaller screens
+      }
+
+      @media (max-width: 600px) {
+        font-size: 48px; // Adjust font size for smaller screens
+      }
+    }
+  }
+  .box2 {
+    background-color: #b9a0ff;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+
+    @keyframes verticalMove {
+      0% {
+        top: 0;
+      }
+      100% {
+        top: -100%;
+      }
+    }
+
+    h1 {
+      position: fixed; /* Position the text absolutely */
+      white-space: nowrap;
+      transform-origin: top bottom;
+      transform: rotate(-90deg) translateX(-50%); /* Rotate and center */
+      animation: verticalMove 10s linear infinite; /* Apply animation */
+      color: #1a1d21;
+      font-family: "Krona One";
+      font-size: 24px;
+    }
+  }
+  .box3 {
+    // background-color: #2196f3;
+    z-index: 3;
+
+    .content {
+      padding: 20px;
+      // line-height: 32px;
+      color: white;
+      font-family: "Lexend";
+
+      .content-header {
+        font-weight: 700;
+        font-size: 26px;
+      }
+      .content-header2 {
+        font-weight: 800;
+        font-size: 57px;
+        margin-top: 20px;
+        word-break: break-word; // Ensures long words break and wrap properly
+        word-wrap: normal;
+        white-space: normal;
+      }
+      .content-header3 {
+        font-weight: 700;
+        font-size: 24px;
+        // margin-top: 40px;
+        word-break: break-word; // Ensures long words break and wrap properly
+        word-wrap: normal;
+        white-space: normal;
+      }
+    }
+    .content-2 {
+      display: flex;
+      padding-left: 20px;
+      align-items: center;
+      column-gap: 20px;
+      color: white;
+      font-family: "Lexend";
+    }
+    .collectibles {
+      padding: 20px;
+      color: white;
+      font-family: "Lexend";
+      overflow-x: auto; /* Enable horizontal scrolling for slider */
+
+      /* Optional: Hide scrollbar */
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+    }
+    .collectibles::-webkit-scrollbar {
+      display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+    }
+
+    .cards {
+      display: flex;
+      margin-top: 20px;
+      gap: 20px;
+      width: fit-content; /* Ensure cards don't wrap */
+
+      .card {
+        flex: 0 0 auto; /* Ensure cards don't grow */
+        background-color: #333;
+        padding: 20px;
+      }
+    }
+  }
+}
